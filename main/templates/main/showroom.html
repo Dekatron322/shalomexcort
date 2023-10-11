@@ -1,0 +1,72 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+<audio id="audio" autoplay>
+    <source src="{% static 'assets/images/showroom.mpeg' %}" type="audio/mpeg">
+</audio>
+
+<script type="text/javascript">
+    window.addEventListener('click', () => {
+        document.getElementById("audio").play()
+    })
+</script>
+<section class="page_title ds s-pt-120 s-pb-50 s-pt-lg-130 s-pb-lg-90 page_title s-parallax s-overlay">
+					<div class="divider-55 d-none d-lg-block"></div>
+					<div class="container">
+						<div class="row">
+
+							<div class="col-md-12 text-center text-lg-left">
+								<h1 class="color-main">Our Showroom</h1>
+								<ol class=" breadcrumb">
+									<li class="breadcrumb-item">
+										<a href="/">Home</a>
+									</li>
+									<li class="breadcrumb-item">
+										<a href="#">Pages</a>
+									</li>
+									<li class="breadcrumb-item active">
+										Our Showroom
+									</li>
+								</ol>
+							</div>
+
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<section class="ls s-pt-60 s-pb-30 s-pt-lg-100 s-pb-lg-70 s-pt-xl-150 s-pb-xl-120">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="row isotope-wrapper masonry-layout c-mb-30 c-gutter-30" data-filters=".gallery-filters">
+								{% for rs in showroom %}
+								<div class="col-xl-3 col-sm-6 test mortuary cremations">
+									<div class="vertical-item item-gallery text-center ds">
+										<div class="item-media">
+											<img src="{{ rs.image.url }}" alt="">
+											<div class="media-links">
+												<div class="links-wrap">
+													<a class="link-zoom photoswipe-link" title="" href="{{ rs.image.url }}"></a>
+												</div>
+											</div>
+										</div>
+										<div class="item-content gradientdarken-background">
+											<h6>
+												<a href="mailto:shalomescort@gmail.com">{{ rs.title }}</a>
+											</h6>
+										</div>
+									</div>
+								</div>
+								{% endfor %}
+
+								
+
+							</div>
+							<!-- .isotope-wrapper-->
+						</div>
+					</div>
+				</div>
+			</section>
+		{% endblock %}

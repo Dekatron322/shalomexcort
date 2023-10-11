@@ -1,0 +1,191 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+				<section class="page_title ds s-pt-120 s-pb-50 s-pt-lg-130 s-pb-lg-90 page_title s-parallax s-overlay">
+					<div class="divider-55 d-none d-lg-block"></div>
+					<div class="container">
+						<div class="row">
+
+							<div class="col-md-12 text-center text-lg-left">
+								<h1 class="color-main">Contact Us</h1>
+								<ol class=" breadcrumb">
+									<li class="breadcrumb-item">
+										<a href="/">Home</a>
+									</li>
+									<li class="breadcrumb-item">
+										<a href="#">Pages</a>
+									</li>
+									<li class="breadcrumb-item active">
+										Contact Us
+									</li>
+								</ol>
+							</div>
+
+						</div>
+					</div>
+				</section>
+			</div>
+			<section class="ls ms page_map">
+				<div class="marker">
+					<div class="marker-address">Suite BO 8, Gouba Plaza, No. 15, A.E Ekukinam Street, Utako District, FCT Abuja-Nigeria.</div>
+					<div class="marker-title">Find Us</div>
+					<div class="marker-description">
+
+						<ul class="list-unstyled">
+							<li>
+								<span class="icon-inline">
+									<span class="icon-styled color-main">
+										<i class="fa fa-map-marker"></i>
+									</span>
+
+									<span>
+										Suite BO 8, Gouba Plaza, No. 15, A.E Ekukinam Street, Utako District, FCT Abuja-Nigeria.
+									</span>
+								</span>
+							</li>
+
+							<li>
+								<span class="icon-inline">
+									<span class="icon-styled color-main">
+										<i class="fa fa-phone"></i>
+									</span>
+
+									<span>
+										<a href="tel:+2348066485595">+234-806-648-5595</a>
+									</span>
+								</span>
+							</li>
+							<li>
+								<span class="icon-inline">
+									<span class="icon-styled color-main">
+										<i class="fa fa-envelope"></i>
+									</span>
+
+									<span>
+										<a href="mailto:shalomescort@gmail.com">shalomescort@gmail.com</a>
+									</span>
+								</span>
+							</li>
+						</ul>
+					</div>
+
+					<img class="marker-icon" src="{% static 'assets/images/map_marker_icon.png' %}" alt="">
+				</div>
+				<!-- .marker -->
+
+				
+				<!-- .marker -->
+
+				
+				<!-- .marker -->
+			</section>
+
+			<section class="ls s-pt-60 s-pb-30 s-py-lg-100 s-py-xl-150 c-gutter-45 c-mb-30 c-mb-lg-0">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4 animate" data-animation="pullDown">
+							<div class="media box-shadow">
+								<div class="icon-styled color-main fs-40">
+									<i class="ico-placeholders"></i>
+								</div>
+								<div class="media-body">
+									<h6>Adress</h6>
+									<p>
+										Suite BO 8, Gouba Plaza, No. 15, A.E Ekukinam Street, Utako District, FCT Abuja-Nigeria.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 animate" data-animation="pullDown">
+							<div class="media box-shadow">
+								<div class="icon-styled color-main fs-40">
+									<i class="ico-email"></i>
+								</div>
+								<div class="media-body">
+									<h6>Email</h6>
+									<p>
+										<a href="mailto:shalomescort@gmail.com"><span >shalomescort@gmail.com</span></a><br>
+										
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 animate" data-animation="pullDown">
+							<div class="media box-shadow">
+								<div class="icon-styled color-main fs-40">
+									<i class="ico-smartphone-alt"></i>
+								</div>
+								<div class="media-body">
+									<h6>Phone</h6>
+									<p>
+										<a href="tel:+2348066485595">+234 806 648 5595 </a> <br>
+										<a href="tel:+2349151016698">+234 915 101 6698 </a> <br>
+										<a href="tel:+2349151016699">+234 915 101 6699 </a><br>
+										<a href="tel:+2348022768048">+234 802 276 8048 </a>
+									</p>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</section>
+
+			<section class="ls ms s-pt-55 s-pb-55 s-pt-lg-95 s-pb-lg-100 s-pt-xl-145 s-pb-xl-150">
+				<div class="container">
+					<div class="row">
+						<div class="m-auto col-lg-9 animate" data-animation="scaleAppear">
+							<p class="subtitle text-center">today, tomorrow and beyond.</p>
+							<h3 class="special-heading"><span class="color-main">Contact</span> Us</h3>
+							<div class="divider-65 d-none d-lg-block"></div>
+							<div class="px-20">
+								<form class=" c-mb-15 c-gutter-15" method="post">
+									{% csrf_token %}
+									<div class="row">
+										<div class="col-sm-6 col-md-4">
+											<div class="form-group has-placeholder">
+												<label for="name">Full Name <span class="required">*</span></label>
+												<i class="ico-user"></i>
+												<input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control" placeholder="Full Name">
+											</div>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<div class="form-group has-placeholder">
+												<label for="phone">Phone Number<span class="required">*</span></label>
+												<i class="fa fa-phone"></i>
+												<input type="text" aria-required="true" size="30" value="" name="phone" id="phone" class="form-control" placeholder="Phone Number">
+											</div>
+										</div>
+										<div class="col-sm-12 col-md-4">
+											<div class="form-group has-placeholder">
+												<label for="email">Email address<span class="required">*</span></label>
+												<i class="fa fa-envelope"></i>
+												<input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control" placeholder="Email Address">
+											</div>
+										</div>
+										<div class="col-sm-12">
+											<div class="form-group has-placeholder">
+												<label for="message">Message</label>
+												<i class="ico-pen"></i>
+												<textarea aria-required="true" rows="7" cols="45" name="message" id="message" class="form-control" placeholder="Your Message"></textarea>
+											</div>
+										</div>
+									</div>
+									<div class="row mt-35">
+										<div class="col-sm-12">
+											<div class="form-group text-center">
+												<button type="submit" id="contact_form_submit" name="contact_submit" class="btn btn-maincolor">Submit
+												</button>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<!--.col-* -->
+					</div>
+				</div>
+			</section>
+
+			{% endblock %}
